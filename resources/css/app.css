@@ -1,0 +1,20 @@
+@import 'bootstrap';
+@import 'admin-lte';
+@import 'bootstrap-icons';
+.login-box-msg {
+    font-size: 25px;
+    font-weight: bold;
+    color: #5a3e2b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.login-page {
+    background-color: #8b5e3ca6 !important;
+}
+.rotinely{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 80px;
+}
+.corP{
+    background-color:#deb887;
+}
