@@ -3,7 +3,7 @@
     <div class="corP card-body login-card-body">
           <p class="login-box-msg">Cadastro de novo usuário</p>
 
-          <form action="{{ route('cadastro') }}" method="post">
+          <form action="{{ route('registrar') }}" method="post">
             @csrf
             <div class="input-group mb-3">
               <input name="name" type="text" class="form-control" placeholder="Nome de usuário" />
