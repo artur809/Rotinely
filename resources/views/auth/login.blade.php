@@ -1,6 +1,6 @@
 @extends('layouts.auth')
 @section('form')
-    <div class="corP card-body login-card-body">
+    <div class="corLight card-body login-card-body">
           <p class="login-box-msg">LOGIN</p>
 
           <form action="{{ route('entrar') }}" method="post">
@@ -8,7 +8,7 @@
             <div class="input-group mb-3">
               <input name="name" type="text" class="form-control" placeholder="Nome de usuário" />
               <div class="input-group-text">
-                <span style="background-color:" class="bi bi-person-fill"></span>
+                <span class="bi bi-person-fill"></span>
               </div>
             </div>
             <div class="input-group mb-3">

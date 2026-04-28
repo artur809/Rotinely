@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/css/auth.css'])
     
 </head>
 <body>
     
-    <div class="login-page bg-body-secondary" >
+    <div class="login-page corPrimaria" >
        <div class="login-box">
         <div class="login-logo">
         <a class="rotinely"><b>Rotinely</b></a>

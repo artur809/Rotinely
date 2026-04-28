@@ -1,0 +1,10 @@
+.login-box-msg {
+    font-size: 25px;
+    font-weight: bold;
+    color: #8B5E3C;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.login-logo a {
+    color: white !important;
+}

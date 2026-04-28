@@ -1,20 +1,24 @@
 @import 'bootstrap';
 @import 'admin-lte';
 @import 'bootstrap-icons';
-.login-box-msg {
-    font-size: 25px;
-    font-weight: bold;
-    color: #5a3e2b;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+
+.corPrimaria {
+    background-color: #8B5E3C !important;
 }
-.login-page {
-    background-color: #8b5e3ca6 !important;
+.corLight {
+    background-color: #DEB887 !important;
 }
-.rotinely{
-    font-family:'Times New Roman', Times, serif;
+.corDark {
+    background-color: #6B3A2A !important;
+}
+
+.rotinely {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 80px;
 }
-.corP{
-    background-color:#deb887;
+@media (max-width: 768px) {
+    .rotinely {
+        font-size: 2rem !important;
+    }
 }
