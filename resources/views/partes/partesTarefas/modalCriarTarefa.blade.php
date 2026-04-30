@@ -5,7 +5,7 @@
                 <h5 class="modal-title text-white" id="modalCriarTarefaLabel">Nova Tarefa</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body corLight">
+            <div class="modal-body">
                 <form>
                     @csrf
                     <div class="mb-3">
@@ -44,7 +44,7 @@
                     </div>
                 </form>
             </div>
-            <div class="modal-footer corLight">
+            <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn corDark text-white">Adicionar</button>
             </div>

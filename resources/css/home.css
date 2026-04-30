@@ -20,7 +20,7 @@
 }
 
 .fundo-gradiente {
-    background: linear-gradient(to bottom, #8B5E3C, #DEB887);
+    background: linear-gradient(to bottom, #FFFFFF, #DCFCE7);
     min-height: 100vh;
 }
 

@@ -3,19 +3,18 @@
 @import 'bootstrap-icons';
 
 .corPrimaria {
-    background-color: #8B5E3C !important;
+    background-color: #16A34A !important;
 }
 .corLight {
-    background-color: #DEB887 !important;
+    background-color: #DCFCE7 !important;
 }
 .corDark {
-    background-color: #6B3A2A !important;
+    background-color: #15803D !important;
 }
-
 .rotinely {
-    color: white;
+    color: #DCFCE7;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 80px;
+    font-size: 60px;
 }
 @media (max-width: 768px) {
     .rotinely {

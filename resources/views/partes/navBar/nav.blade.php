@@ -1,7 +1,7 @@
 <nav class="main-header navbar navbar-expand-md corDark">
     <div class="container-fluid position-relative">
         <a href="#" class="navbar-brand mx-auto position-absolute start-50 translate-middle-x">
-            <b class="rotinely">Rotinely</b>
+            <b class="rotinely">Rotinely<i class="bi bi-check-circle"></i></b>
         </a>
         <button class="navbar-toggler order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -23,6 +23,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <a class="dropdown-item" href="{{ route('perfil') }}">Ver perfil</a>
+                    <a class="dropdown-item" href="{{ route('admin') }}">Painel Admin</a>
                     <li><a class="dropdown-item text-danger" href="{{ route('login') }}">Logout</a></li>
                 </ul>
             </li>

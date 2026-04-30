@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body corLight">
                     <div class="mb-3">
                         <input type="text" class="form-control" placeholder="Pesquisar tarefa...">
                     </div>
