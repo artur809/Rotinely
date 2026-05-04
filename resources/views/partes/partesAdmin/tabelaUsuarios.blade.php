@@ -7,6 +7,7 @@
                         <tr>
                             <th>Nome de usuário</th>
                             <th>Email</th>
+                            <th>Tipo</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -14,6 +15,7 @@
                         <tr>
                             <td>usuario1</td>
                             <td>usuario1@email.com</td>
+                            <td><span class="badge bg-danger">Administrador</span></td>
                             <td class="d-flex gap-2">
                                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditarUsuario">Editar</button>
                                 <button class="btn btn-danger btn-sm">Excluir</button>
@@ -22,6 +24,7 @@
                         <tr>
                             <td>usuario2</td>
                             <td>usuario2@email.com</td>
+                            <td><span class="badge bg-secondary">Usuário</span></td>
                             <td class="d-flex gap-2">
                                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditarUsuario">Editar</button>
                                 <button class="btn btn-danger btn-sm">Excluir</button>
@@ -30,6 +33,7 @@
                         <tr>
                             <td>usuario3</td>
                             <td>usuario3@email.com</td>
+                            <td><span class="badge bg-secondary">Usuário</span></td>
                             <td class="d-flex gap-2">
                                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditarUsuario">Editar</button>
                                 <button class="btn btn-danger btn-sm">Excluir</button>
