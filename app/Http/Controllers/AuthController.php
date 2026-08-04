@@ -14,12 +14,4 @@ class AuthController extends Controller
     {
         return view('auth.cadastro');
     }
-    public function entrar()
-    {
-        return redirect()->route('home');
-    }
-    public function registrar()
-    {
-        return redirect()->route('home');
-    }
 }

@@ -10,14 +10,16 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label fw-bold text-dark" style="font-size: 1.1rem;">Nome de usuário</label>
-                    <p class="text-dark" style="font-size: 1.1rem;">NomeDoUsuario</p>
+                    <p class="text-dark" style="font-size: 1.1rem;">{{ $user->name }}</p>
                 </div>
                 <div class="mb-3">
                     <label class="form-label fw-bold text-dark" style="font-size: 1.1rem;">Email</label>
-                    <p class="text-dark" style="font-size: 1.1rem;">email@email.com</p>
+                    <p class="text-dark" style="font-size: 1.1rem;">{{ $user->email }}</p>
                 </div>
                 <div class="d-flex justify-content-end gap-2">
-                    <button class="btn btn-danger">Excluir conta</button>
+                    <form action="{{ route('perfil.destroy') }}" method="GET">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Tem certeza? Essa ação não pode ser desfeita.')">Excluir conta</button>
+                    </form>
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEditarPerfil">Editar perfil</button>
                 </div>
             </div>

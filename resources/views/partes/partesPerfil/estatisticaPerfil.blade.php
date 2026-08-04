@@ -2,7 +2,7 @@
     <div class="col-md-3">
         <div class="card text-center">
             <div class="card-body">
-                <h2 class="text-dark">10</h2>
+                <h2 class="text-dark">{{ $totalTarefas }}</h2>
                 <p class="text-dark mb-0" style="font-size: 1.1rem;">Total de tarefas</p>
             </div>
         </div>
@@ -10,7 +10,7 @@
     <div class="col-md-3">
         <div class="card text-center">
             <div class="card-body">
-                <h2 class="text-dark">6</h2>
+                <h2 class="text-dark">{{ $tarefasConcluidas }}</h2>
                 <p class="text-dark mb-0" style="font-size: 1.1rem;">Tarefas concluídas</p>
             </div>
         </div>
@@ -18,7 +18,7 @@
     <div class="col-md-3">
         <div class="card text-center">
             <div class="card-body">
-                <h2 class="text-dark">4</h2>
+                <h2 class="text-dark">{{ $tarefasPendentes }}</h2>
                 <p class="text-dark mb-0" style="font-size: 1.1rem;">Tarefas pendentes</p>
             </div>
         </div>

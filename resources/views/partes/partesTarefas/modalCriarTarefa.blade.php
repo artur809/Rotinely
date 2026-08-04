@@ -1,13 +1,22 @@
 <div class="modal fade" id="modalCriarTarefa" tabindex="-1" aria-labelledby="modalCriarTarefaLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header corDark">
-                <h5 class="modal-title text-white" id="modalCriarTarefaLabel">Nova Tarefa</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    @csrf
+            <form action="{{ route('tarefas.store') }}" method="POST">
+                @csrf
+                <div class="modal-header corDark">
+                    <h5 class="modal-title text-white" id="modalCriarTarefaLabel">Nova Tarefa</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="mb-0">
+                                @foreach ($errors->all() as $erro)
+                                    <li>{{ $erro }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="mb-3">
                         <label class="form-label fw-bold">Título</label>
                         <input type="text" name="titulo" class="form-control" placeholder="Título da tarefa">
@@ -42,12 +51,12 @@
                             </div>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn corDark text-white">Adicionar</button>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn corDark text-white">Adicionar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
