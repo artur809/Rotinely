@@ -25,8 +25,8 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name'     => 'required|string|max:255',
-            'email'    => ['required', 'email', Rule::unique('users', 'email')->ignore($id)],
+            'name' => 'required|string|max:255',
+            'email' => ['required', 'email', Rule::unique('users', 'email')->ignore($id)],
             'is_admin' => 'required|boolean',
         ]);
 
@@ -68,6 +68,31 @@ class AdminController extends Controller
 
         } catch (\Exception $e) {
             session()->flash('erro', 'Erro ao excluir usuário: ' . $e->getMessage());
+            return redirect()->route('admin');
+        }
+    }
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6',
+            'is_admin' => 'required|boolean',
+        ]);
+
+        try {
+            $usuario = new User();
+            $usuario->name = $request->name;
+            $usuario->email = $request->email;
+            $usuario->password = $request->password;
+            $usuario->is_admin = $request->is_admin;
+            $usuario->save();
+
+            session()->flash('msg', 'Usuário criado com sucesso!');
+            return redirect()->route('admin');
+
+        } catch (\Exception $e) {
+            session()->flash('erro', 'Erro ao criar usuário: ' . $e->getMessage());
             return redirect()->route('admin');
         }
     }

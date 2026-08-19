@@ -15,9 +15,7 @@
                     </div>
                     <div class="d-flex align-items-center gap-3">
                         <span class="tarefa-texto text-dark">{{ $tarefa->prioridade }}</span>
-                        <form action="{{ route('tarefas.concluir', $tarefa->id) }}" method="GET" class="d-inline">
-                            <input type="checkbox" class="tarefa-checkbox" onchange="this.form.submit()" {{ $tarefa->status === 'concluida' ? 'checked' : '' }}>
-                        </form>
+                        <input type="checkbox" class="tarefa-checkbox" data-id="{{ $tarefa->id }}" {{ $tarefa->status === 'concluida' ? 'checked' : '' }}>
                         <button class="btn btn-link text-primary p-0" data-bs-toggle="modal" data-bs-target="#modalEditarTarefa{{ $tarefa->id }}">
                             <i class="bi bi-pencil fs-4"></i>
                         </button>
@@ -131,5 +129,10 @@
         $(document).on('click', '.btn-remover', function () {
             $(this).closest('div').remove();
         });
+    });
+
+    $(document).off('change', '.tarefa-checkbox').on('change', '.tarefa-checkbox', function () {
+        const id = $(this).data('id');
+        $.get('/tarefas/' + id + '/concluir');
     });
 </script>

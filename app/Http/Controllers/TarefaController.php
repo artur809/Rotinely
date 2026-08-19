@@ -86,17 +86,11 @@ class TarefaController extends Controller
 
     public function concluir($id)
     {
-        try {
-            $tarefa = Tarefa::where('user_id', auth()->id())->findOrFail($id);
-            $tarefa->status = $tarefa->status === 'concluida' ? 'pendente' : 'concluida';
-            $tarefa->save();
+        $tarefa = Tarefa::where('user_id', auth()->id())->findOrFail($id);
+        $tarefa->status = $tarefa->status === 'concluida' ? 'pendente' : 'concluida';
+        $tarefa->save();
 
-            return redirect()->route('home');
-
-        } catch (\Exception $e) {
-            session()->flash('erro', 'Erro ao atualizar status: ' . $e->getMessage());
-            return redirect()->route('home');
-        }
+        return response()->json(['status' => $tarefa->status]);
     }
 
     public function pesquisa(Request $request)
