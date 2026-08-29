@@ -29,8 +29,17 @@
     "src": "resources/css/auth.css",
     "isEntry": true
   },
+  "resources/css/home.css": {
+    "file": "assets/home-DCNomqmD.css",
+    "name": "home",
+    "names": [
+      "home.css"
+    ],
+    "src": "resources/css/home.css",
+    "isEntry": true
+  },
   "resources/js/app.js": {
-    "file": "assets/app-DlSivXfi.js",
+    "file": "assets/app-CpOeVKXF.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
