@@ -20,8 +20,17 @@
       "assets/bootstrap-icons-BeopsB42.woff"
     ]
   },
+  "resources/css/auth.css": {
+    "file": "assets/auth-MuWF_zyT.css",
+    "name": "auth",
+    "names": [
+      "auth.css"
+    ],
+    "src": "resources/css/auth.css",
+    "isEntry": true
+  },
   "resources/js/app.js": {
-    "file": "assets/app-Dn8XaCXx.js",
+    "file": "assets/app-DlSivXfi.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
