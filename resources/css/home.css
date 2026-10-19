@@ -17,24 +17,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+}
+
+.btn-adicionar:hover {
+    transform: scale(1.1);
 }
 
 .fundo-gradiente {
-    background: linear-gradient(to bottom, #FFFFFF, #DCFCE7);
+    background: linear-gradient(to bottom, #FFFFFF, #B7D7DC);
     min-height: 100vh;
 }
 
 .card {
-    background-color: transparent !important;
-    border: 1px solid white;
+    background-color: white !important;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0.75rem;
 }
 
 .main-header {
     min-height: 70px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .main-header.corPrimaria {
-    background-color: #8B5E3C !important;
+    background-color: #1668A3 !important;
 }
 
 .btn-editar {
@@ -44,6 +54,45 @@
 .btn-excluir {
     color: #dc3545 !important;
 }
+
+.empty-state {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: #154B80;
+}
+
+.empty-state i {
+    font-size: 4rem;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.badge-prioridade-alta {
+    background-color: #FCDADA;
+    color: #B91C1C;
+}
+
+.badge-prioridade-media {
+    background-color: #FEF3C7;
+    color: #92400E;
+}
+
+.badge-prioridade-baixa {
+    background-color: #D1FAE5;
+    color: #166534;
+}
+
+.badge-prioridade-alta,
+.badge-prioridade-media,
+.badge-prioridade-baixa {
+    font-size: 0.95rem;
+    padding: 0.4em 0.8em;
+}
+
 @media (max-width: 768px) {
     .tarefa-texto {
         font-size: 0.85rem !important;
@@ -57,3 +106,4 @@
         font-size: 1.5rem !important;
     }
 }
+

@@ -14,7 +14,7 @@
                         <p class="text-dark mb-0 tarefa-texto">{{ $tarefa->descricao }}</p>
                     </div>
                     <div class="d-flex align-items-center gap-3">
-                        <span class="tarefa-texto text-dark">{{ $tarefa->prioridade }}</span>
+                        <span class="badge rounded-pill badge-prioridade-{{ $tarefa->prioridade }}">{{ $tarefa->prioridade }}</span>
                         <input type="checkbox" class="tarefa-checkbox" data-id="{{ $tarefa->id }}" {{ $tarefa->status === 'concluida' ? 'checked' : '' }}>
                         <button class="btn btn-link text-primary p-0" data-bs-toggle="modal" data-bs-target="#modalEditarTarefa{{ $tarefa->id }}">
                             <i class="bi bi-pencil fs-4"></i>

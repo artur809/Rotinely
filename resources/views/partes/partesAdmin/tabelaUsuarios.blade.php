@@ -8,6 +8,7 @@
 
         <div class="card">
             <div class="card-body">
+                <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -29,7 +30,7 @@
                                         <span class="badge bg-secondary">Usuário</span>
                                     @endif
                                 </td>
-                                <td class="d-flex gap-2">
+                                <td class="d-flex gap-2 flex-wrap">
                                     <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditarUsuario{{ $usuario->id }}">Editar</button>
                                     @if($usuario->id !== auth()->id())
                                         <form action="{{ route('admin.destroy', $usuario->id) }}" method="GET" class="d-inline">
@@ -41,6 +42,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
     </div>
