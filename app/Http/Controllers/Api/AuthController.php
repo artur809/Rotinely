@@ -46,13 +46,14 @@ class AuthController extends Controller
         return response()->json($this->formatarUsuario($request->user()));
     }
 
-    // devolve só o que o app precisa (nunca a senha)
+    // devolve só o que o app precisa
     private function formatarUsuario(User $user): array
     {
         return [
             'id' => $user->id,
             'nome' => $user->name,
             'email' => $user->email,
+            'cadastrado_em' => $user->created_at?->toIso8601String(),
         ];
     }
 }
