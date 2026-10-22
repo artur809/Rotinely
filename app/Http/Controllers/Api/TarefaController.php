@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class TarefaController extends Controller
 {
-    // todas as tarefas do usuário dono do token, já com as categorias
+    // todas as tarefas do usuário dono do token já com as categorias
     public function index(Request $request)
     {
         $tarefas = Tarefa::with('categorias')
@@ -20,14 +20,14 @@ class TarefaController extends Controller
         return response()->json($tarefas);
     }
 
-    // marca ou desmarca como concluída (o app diz qual status quer)
+    // marca ou desmarca como concluída pelo app
     public function status(Request $request, $id)
     {
         $request->validate([
             'status' => 'required|in:pendente,concluida',
         ]);
 
-        // filtra por user_id: ninguém mexe na tarefa de outro usuário
+        // filtra por user_id e ninguém mexe na tarefa de outro usuário
         $tarefa = Tarefa::with('categorias')
             ->where('user_id', $request->user()->id)
             ->findOrFail($id);

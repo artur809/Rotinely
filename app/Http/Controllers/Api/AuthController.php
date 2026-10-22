@@ -15,15 +15,12 @@ class AuthController extends Controller
             'email' => 'required|email',
             'password' => 'required|string',
         ]);
-
         $user = User::where('email', $request->email)->first();
-
-        // Hash::check compara a senha digitada com o hash salvo no banco
         if (!$user || !Hash::check($request->password, $user->password)) {
             return response()->json(['message' => 'E-mail ou senha inválidos.'], 401);
         }
 
-        // cria o token; o app guarda e manda nas próximas requisições
+        // cria o token
         $token = $user->createToken('mobile')->plainTextToken;
 
         return response()->json([
